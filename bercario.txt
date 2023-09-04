@@ -4,7 +4,6 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 async function main() {
-  // Criar uma mãe
   const mae = await prisma.mae.create({
     data: {
         id: '1',
@@ -15,7 +14,6 @@ async function main() {
     },
   });
 
-  // Criar um médico
   const medico = await prisma.medico.create({
     data: {
         Id: '2896',
@@ -26,7 +24,6 @@ async function main() {
     },
   });
 
-  // Registrar um bebê nascido
   const bebe = await prisma.bebe.create({
     data: {
         id: '8562',
